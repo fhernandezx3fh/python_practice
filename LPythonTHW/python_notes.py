@@ -1,6 +1,18 @@
-# ********** Python Notes ********** 
 
-# ********** Useful Imports
+# ********** Python Notes *****************************************************
+# Reading documentation
+# python -m pydoc raw_input    [-m runs library module as script.
+#                               pydoc in this case]
+# Max line length = 79
+#
+#
+# Useful Exercises: 16, 
+# 
+#
+#
+#
+
+# ********** Useful Imports ***************************************************
 from sys import argv
 from os.path import exists
 # Check to see if file exists
@@ -11,7 +23,7 @@ exit(0) # good exit
 from random import randint
 
 
-# ********** Printing
+# ********** Printing *********************************************************
 days = "Mon Tue Wed Thu Fri Sat Sun"
 months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
 
@@ -27,19 +39,19 @@ print months
 # Here is how you print multiple variables on the same print command
 print "Here are the days: %s\nHere are the months: %s" % (days, months)
 
-# ********** Prompting
+# ********** Prompting ********************************************************
 prompt = '> '
 print "What kind of computer do you have?"
 # Prompt the user to input a computer name and assign to computer variable.
 # the prompt variable is the string that the user sees as their prompt string
 computer = raw_input(prompt)
 
-# ********** Arguments
+# ********** Arguments ********************************************************
 from sys import argv
 # The first imported argument is always the called python script
 script, filename = argv
 
-# ********** Working with Files
+# ********** Working with Files ***********************************************
 # Opening file in write mode
 # You can also ope the file in
 # Append Mode   'a'
@@ -50,7 +62,7 @@ target.read()
 line1 = raw_input("line 1: ")
 target.write(line1)
 
-# ********** Dictionaries
+# ********** Dictionaries *****************************************************
 # key:value
 states = {
     'Oregon': 'OR',
@@ -60,7 +72,7 @@ states = {
     'Michigan': 'MI'
 }
 
-# ********** Nested Dictionaries
+# ********** Nested Dictionaries **********************************************
 >>> section[4] = {'Title':''},{'Description':''},{'Subsections':[]}
 >>> section
 {4: ({'Title': ''}, {'Description': ''}, {'Subsections': []})}
@@ -85,7 +97,7 @@ states = {
 
 
 
-# ********** Classes
+# ********** Classes **********************************************************
 class X(Y)
 "Make a class named X that is-a Y."
 class X(object): def __init__(self, J)
@@ -100,7 +112,7 @@ foo.K = Q
 "From foo get the K attribute and set it to Q."
 
 
-# ********** Modules
+# ********** Modules **********************************************************
 # When a script is run from python directly, it first assigns __name__ to "__main__"
 # This will check to see if the module running is directly.
 # If it is, then __name__ == "__main__"
