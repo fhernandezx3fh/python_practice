@@ -4,7 +4,7 @@ def print_heading(head_str):
   '''Print heading with line max = 79, per PEP-08'''
   print '#{:*^77}#'.format(head_str)
 
-print_heading('Sum of positive')
+print_heading('Count by X')
 
 #********************Sum without highest and lowest number********************#
 def sum_array(arr):
@@ -73,6 +73,13 @@ def positive_sum(arr):
 def positive_sum(arr):
   return sum(x for x in arr if x > 0)
 
+#*********************************Count by X**********************************#
+'''Create a function with two arguments that will return a list of 
+length (n) with multiples of (x).'''
+def count_by(x, n):
+  return range(x, x*n+1, x)
+
+
 #************************************Tests************************************#
 print sum_array([6, 2, 1, 8, 10])
 print sum_array([1, 3])
@@ -97,3 +104,5 @@ print make_negative(1)
 print digitize(35231)
 
 print positive_sum([1,-2,3,4,5])
+
+print count_by(50, 5)
