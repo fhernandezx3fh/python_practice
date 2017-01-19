@@ -4,7 +4,7 @@ def print_heading(head_str):
   '''Print heading with line max = 79, per PEP-08'''
   print '#{:*^77}#'.format(head_str)
 
-print_heading('Count by X')
+print_heading('grep')
 
 #********************Sum without highest and lowest number********************#
 def sum_array(arr):
@@ -79,6 +79,25 @@ length (n) with multiples of (x).'''
 def count_by(x, n):
   return range(x, x*n+1, x)
 
+#*******************************Opposite number*******************************#
+def opposite(number):
+  return -number
+
+#*********************************Double Char*********************************#
+def double_char(s):
+  s2 = ""
+  for ch in s:
+    s2 = s2 + ch*2
+  return s2
+
+# OR
+
+def double_char(s):
+  return ''.join(c * 2 for c in s)
+
+#*********************************Even or Odd*********************************#
+def even_or_odd(number):
+  return ("Even" if number % 2 == 0 else "Odd")
 
 #************************************Tests************************************#
 print sum_array([6, 2, 1, 8, 10])
@@ -106,3 +125,9 @@ print digitize(35231)
 print positive_sum([1,-2,3,4,5])
 
 print count_by(50, 5)
+
+print opposite(1)
+
+print double_char("String")
+
+print even_or_odd(2)
